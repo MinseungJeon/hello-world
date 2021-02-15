@@ -10,7 +10,15 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
 Vue.config.productionTip = false
-export const eventBus = new Vue();
+
+export const eventBus = new Vue({
+  methods: {
+    changeAge(age) {
+      this.$emit('ageWasEdited', age);
+    }
+  }
+})
+
 
 new Vue({
   render: h => h(App),
