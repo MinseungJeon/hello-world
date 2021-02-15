@@ -22,7 +22,7 @@
     export default {
         data: function() {
             return {
-                name: 'Max'
+                name: '[1,2,3]'
             }
         },
         methods: {
