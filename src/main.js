@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import VueResource from 'vue-resource'
 import App from './App.vue'
 // import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 // import 'bootstrap/dist/css/bootstrap.css'
@@ -11,15 +12,7 @@ import App from './App.vue'
 
 // Vue.config.productionTip = false
 
-Vue.filter('tolowercase', function(value){
-  return value.toLowerCase();
-})
-
-Vue.mixin({
-  created(){
-    console.log('Global Mixin - Created Hook');
-  }
-});
+Vue.use(VueResource);
 
 new Vue({
   render: h => h(App),
