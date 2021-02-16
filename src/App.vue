@@ -111,6 +111,7 @@
         <div
           class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3"
         >
+          <app-switch v-model="dataSwitch"></app-switch>
           <button class="btn btn-primary">Submit!</button>
         </div>
       </div>
@@ -135,6 +136,7 @@
             </ul>
             <p>Gender: {{ gender }}</p>
             <p>Priority:{{ selectedPriority }}</p>
+            <p>Switch:{{ dataSwitch }}</p>
             <p>Switched:</p>
           </div>
         </div>
@@ -144,6 +146,7 @@
 </template>
 
 <script>
+import Switch from "./components/Switch.vue";
 export default {
   data() {
     return {
@@ -157,7 +160,11 @@ export default {
       gender: "male",
       selectedPriority: "High",
       priorities: ["High", "Medium", "Low"],
+      dataSwitch: true,
     };
+  },
+  components: {
+    appSwitch: Switch,
   },
 };
 </script>
