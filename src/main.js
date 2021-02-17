@@ -14,7 +14,7 @@ import App from './App.vue'
 
 Vue.use(VueResource);
 
-Vue.http.options.root = "https://vuejs-http-9afd6-default-rtdb.firebaseio.com/data.json";
+Vue.http.options.root = "https://vuejs-http-9afd6-default-rtdb.firebaseio.com/";
 Vue.http.interceptors.push((request, next) => {
   console.log(request);
   if (request.method == 'POST'){
