@@ -46,7 +46,8 @@ export default {
       //     console.log(error);
       //   }
       // );
-      this.resource.save({}, this.user);
+      // this.resource.save({}, this.user);
+      this.resource.saveAlt(this.user);
     },
     fetchData() {
       this.$http
@@ -64,6 +65,9 @@ export default {
     },
   },
   created() {
+    const customActions = {
+      saveAlt: {method: 'POST', url: 'alternative.json'}
+    },
     this.resource = this.$resource("data.json");
   },
 };
